@@ -37,17 +37,3 @@ inject = module.exports =
     all: all
     add: add
     bind: bind
-
-
-# provided so even javascript can look nice
-inject.bind 'banana', '1'
-inject.bind 'banana': '2'
-inject.bind banana: '3'
-inject.bind
-    banana: '4'
-    fruit: 'so,mething'
-
-console.log inject.all 'banana'
-console.log inject.one 'fruit'
-
-# todo: context, eg singleton, request - need to intergrate with other systems :(

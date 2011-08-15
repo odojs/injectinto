@@ -45,17 +45,4 @@
     add: add,
     bind: bind
   };
-  inject.bind('banana', '1');
-  inject.bind({
-    'banana': '2'
-  });
-  inject.bind({
-    banana: '3'
-  });
-  inject.bind({
-    banana: '4',
-    fruit: 'so,mething'
-  });
-  console.log(inject.all('banana'));
-  console.log(inject.one('fruit'));
 }).call(this);
