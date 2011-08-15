@@ -1,5 +1,6 @@
 {
-    "name": "Poor Man's Dependency Injection",
+    "name": "PMInject",
+    "description": "Poor Man's Dependency Injection",
     "version": "0.0.1",
     "engines": {
         "node": "0.4.x"
