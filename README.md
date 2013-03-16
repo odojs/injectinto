@@ -1,5 +1,5 @@
-Poor Man's Dependency Injection
-===============================
+Dependency Injection
+====================
 
 Example (CoffeeScript)
 ----------------------
@@ -19,7 +19,7 @@ cms.coffee
     
     inject = require 'pminject'
     
-    contenttypes = inject.all 'contenttypes'
+    contenttypes = inject.many 'contenttypes'
     templaterenderer = inject.one 'templaterenderer'
     
     for contenttype in contenttypes
@@ -33,8 +33,8 @@ What is the problem?
 I'd like to build systems that can easily be extended, enhanced, or replaced.
 
 
-How PMInject solves this problem
---------------------------------
+How injectinto solves this problem
+----------------------------------
 
 1. Extension points are defined through strings, for example 'templateengine'
 2. In configuration these extension points are bound to actual objects
@@ -48,11 +48,3 @@ Goals
 1. Simple
 2. Work with async
 3. Allow multiple registrations
-
-
-Planned Features
-----------------
-
-1. Scope for creating new instances
-2. Using the requesting module to map to an instance
-3. Various other features that are appropriate from NInject

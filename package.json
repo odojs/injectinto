@@ -1,12 +1,25 @@
 {
-    "name": "PMInject",
-    "description": "Poor Man's Dependency Injection",
+    "name": "injectinto",
+    "description": "Dependency injection for nodejs.",
     "version": "0.0.1",
-    "engines": {
-        "node": "0.4.x"
+    "main": "inject.js",
+    "author": {
+        "name": "Thomas Coats"
     },
-    "author": "Thomas Coats (https://github.com/tcoats)",
-    "main": "pminject.js",
+    "maintainers": [
+        {
+            "name": "Thomas Coats",
+            "email": "github@voodoolabs.net"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tcoats/injectinto.git"
+    },
+    "homepage": "https://github.com/tcoats/injectinto",
+    "dependencies": {
+        "underscore": "1.x"
+    },
     "dependencies": {
     }
 }
