@@ -104,14 +104,4 @@ class Inject
     delete @bindings[key]
 
 
-module.exports =
-  Inject: Inject
-  configure: (app) ->
-    app.inject = new Inject
-
-    app.use (req, res, next) ->
-      app.inject.clear 'req'
-      app.inject.bind 'req', req
-      app.inject.clear 'res'
-      app.inject.bind 'res', res
-      next()
+module.exports = Inject
