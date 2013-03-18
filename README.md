@@ -1,30 +1,27 @@
 Dependency Injection
-====================
-
-Example (CoffeeScript)
-----------------------
+--------------------
 
 config.coffee
-    
-    inject = require 'pminject'
-    
-    inject.bind templaterenderer: require 'nun'
-    inject.bind contenttypes: [
-        require './contenttypes/text'
-        require './contenttypes/image'
-    ]
+```coffeescript
+inject = require 'pminject'
 
+inject.bind templaterenderer: require 'nun'
+inject.bind contenttypes: [
+    require './contenttypes/text'
+    require './contenttypes/image'
+]
+```
 
 cms.coffee
-    
-    inject = require 'pminject'
-    
-    contenttypes = inject.many 'contenttypes'
-    templaterenderer = inject.one 'templaterenderer'
-    
-    for contenttype in contenttypes
-        templaterenderer.render contenttype
+```coffeescript 
+inject = require 'pminject'
 
+contenttypes = inject.many 'contenttypes'
+templaterenderer = inject.one 'templaterenderer'
+
+for contenttype in contenttypes
+    templaterenderer.render contenttype
+```
 
 
 What is the problem?
