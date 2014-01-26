@@ -1,10 +1,7 @@
-# Dependency Injection
-# ====================
-
-_ = require 'underscore'
+# # Dependency Injection
 
 class Inject
-  constructor: () ->
+  constructor: ->
     @bindings = {}
 
   # app.inject.bind 'item', item
@@ -20,7 +17,7 @@ class Inject
     if !@bindings[key]?
       @bindings[key] = []
 
-    if _.isArray item
+    if Array::isArray item
       for i in item
         @bindings[key].push i
     else
