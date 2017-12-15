@@ -42,21 +42,21 @@ const res = {
   },
 
   one: (key) => {
-    if (bindings[key] == null) throw new Error("#{key} not found")
+    if (bindings[key] == null) throw new Error(`${key} not found`)
     const items = bindings[key]
-    if (items.length > 1) throw new Error("#{key} too many bound")
+    if (items.length > 1) throw new Error(`${key} too many bound`)
     return items[0]
   },
 
   oneornone: (key) => {
     if (bindings[key] == null) return null
     const items = bindings[key]
-    if (items.length > 1) throw new Error("#{key} too many bound")
+    if (items.length > 1) throw new Error(`${key} too many bound`)
     return items[0]
   },
 
   first: (key) => {
-    if (bindings[key] == null) throw new Error("#{key} not found")
+    if (bindings[key] == null) throw new Error(`${key} not found`)
     return bindings[key][0]
   },
 
