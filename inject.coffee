@@ -38,6 +38,7 @@ bind = ->
       @bindings[key]
 
     clear: (key) => delete @bindings[key]
+    clearAll: () => @bindings = {}
   
   new Inject
 
