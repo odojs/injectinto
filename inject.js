@@ -1,4 +1,4 @@
-const inject = () =>
+const inject = () => {
   let bindings = {}
   return {
     bind: (key, item) => {
@@ -78,6 +78,7 @@ const inject = () =>
       bindings = {}
     }
   }
+}
 
 let _inject = null
 const assert = () => {
