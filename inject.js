@@ -80,18 +80,16 @@ const inject = () => {
   }
 }
 
-let _inject = null
-const assert = () => {
-  if (_inject == null) _inject = inject()
-  return _inject
+let _inject = inject()
+module.exports = (key, item) => {
+  if (key == null) return inject()
+  return _inject.bind(key, item)
 }
-
-inject.bind = (key, item) => assert().bind(key, item)
-inject.one = (key) => assert().one(key)
-inject.oneornone = (key) => assert().oneornone(key)
-inject.first = (key) => assert().first(key)
-inject.firstornone = (key) => assert().firstornone(key)
-inject.many = (key) => assert().many(key)
-inject.clear = (key) => assert().clear(key)
-inject.clearAll = () => assert().clearAll()
-module.exports = inject
+module.exports.bind = (key, item) => _inject.bind(key, item)
+module.exports.one = (key) => _inject.one(key)
+module.exports.oneornone = (key) => _inject.oneornone(key)
+module.exports.first = (key) => _inject.first(key)
+module.exports.firstornone = (key) => _inject.firstornone(key)
+module.exports.many = (key) => _inject.many(key)
+module.exports.clear = (key) => _inject.clear(key)
+module.exports.clearAll = () => _inject.clearAll()
