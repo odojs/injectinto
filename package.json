@@ -1,7 +1,7 @@
 {
   "name": "injectinto",
   "description": "Register and request components. Dependency injection for nodejs.",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "main": "inject.js",
   "author": {
     "name": "Thomas Coats"
